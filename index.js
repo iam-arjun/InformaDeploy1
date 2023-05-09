@@ -28,7 +28,7 @@ user_app.use(bodyParser.json({
     },
     limit: '50mb'
     }))
-user_app.use(cors({"*"}))
+user_app.use(cors({origin:"*"}))
 
 
 user_app.use('/Allemp',routes)
