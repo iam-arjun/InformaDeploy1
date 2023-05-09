@@ -28,12 +28,8 @@ user_app.use(bodyParser.json({
     },
     limit: '50mb'
     }))
-user_app.use(cors())
-user_app.get('/',(req,res)=>{
-    res.setHeader("Access-Control-Allow-Credentials","true")
-    res.send('Api is running')
-    
-})
+user_app.use(cors({"*"}))
+
 
 user_app.use('/Allemp',routes)
 
